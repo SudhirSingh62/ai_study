@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f7fb" />
+    <title>HireMe | AI candidate profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="HireMe home">
+          <span class="brand-mark">H</span>
+          <span>hire<span class="brand-accent">me</span></span>
+        </a>
+        <div class="topbar-meta">
+          <span class="status-dot" id="api-dot"></span>
+          <span id="api-status">Connecting to profile</span>
+          <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle dark mode">☾</button>
+        </div>
+      </header>
+
+      <main class="main-grid">
+        <section class="intro">
+          <p class="eyebrow">AI-powered candidate profile</p>
+          <h1>Meet the person<br /><span>behind the resume.</span></h1>
+          <p class="intro-copy">
+            Ask a question and get a thoughtful answer grounded in Sudhir's
+            actual experience, skills, and projects.
+          </p>
+          <div class="profile-card">
+            <div class="avatar">SS</div>
+            <div>
+              <h2>Sudhir Singh</h2>
+              <p>Software engineer · AI builder</p>
+            </div>
+            <span class="availability"><i></i> Open to conversations</span>
+          </div>
+          <div class="trust-note">
+            <span class="shield">✦</span>
+            <span>Answers are generated only from the candidate's resume.</span>
+          </div>
+        </section>
+
+        <section class="chat-card" aria-label="Candidate chat">
+          <div class="chat-header">
+            <div>
+              <p class="eyebrow">Candidate Q&amp;A</p>
+              <h2>Ask Sudhir's profile</h2>
+            </div>
+            <span class="ai-badge">AI <span>●</span></span>
+          </div>
+
+          <div class="messages" id="messages" aria-live="polite">
+            <div class="message assistant-message">
+              <div class="message-avatar">H</div>
+              <div class="bubble">
+                <p>Hi! I'm here to help you get to know Sudhir better.</p>
+                <p>What would you like to learn about his background?</p>
+                <span class="message-time">Just now</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="suggestions" id="suggestions">
+            <button type="button" data-question="What are Sudhir's strongest technical skills?">Technical skills</button>
+            <button type="button" data-question="Tell me about Sudhir's work experience.">Work experience</button>
+            <button type="button" data-question="What projects has Sudhir worked on?">Projects</button>
+          </div>
+
+          <form class="composer" id="chat-form">
+            <label class="sr-only" for="question">Ask a question about Sudhir</label>
+            <input id="question" name="question" type="text" autocomplete="off" placeholder="Ask anything about the candidate..." required />
+            <button class="send-button" type="submit" aria-label="Send question">
+              <span>↗</span>
+            </button>
+          </form>
+          <p class="composer-hint">Press <kbd>Enter</kbd> to send · Responses may take a moment</p>
+        </section>
+      </main>
+      <footer>Built to make the first conversation more meaningful.</footer>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

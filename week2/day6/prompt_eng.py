@@ -24,7 +24,8 @@ def llm_ans(prompt):
     return ans
 
 
-bad_prompt="""
+
+good_prompt="""
 #ROLE:
 You are a support assistant at a mobile/laptop company
 #TASK
@@ -41,4 +42,4 @@ This is a user complaint:
 My marriage is broke
 """
 
-print(llm_ans(bad_prompt))
+print(llm_ans(good_prompt))
